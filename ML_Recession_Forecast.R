@@ -9,12 +9,13 @@ suppressPackageStartupMessages({
   if (!require("tidyquant")) install.packages("tidyquant"); library(tidyquant)
   if (!require("tidyverse")) install.packages("tidyverse"); library(tidyverse)
   if (!require("rpart")) install.packages("rpart"); library(rpart)
+  if (!require("gbm")) install.packages("gbm"); library(gbm)
 })
 
 # Local Variables
 symbols           <- c("ISM/MAN_PMI", "FRED/GS10", "FRED/GS2", "FRED/UNRATE", "FRED/USREC") # Macro Data from Quandl
 nPeriods_Forecast <- 24 # How many months into the future you want to go
-Quandl_API        <- "XXXXXXXXXXXXXXXXXXXXXXX" # Put your Quandl API
+Quandl_API        <- "Put your Quandl API HERE"
 laging_Periods    <- 3 # How many months you want to consider for training the model
 
 # Feeling (what do you think will happen with the values in the future)
